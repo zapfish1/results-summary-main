@@ -1,0 +1,267 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button {
+  all: unset;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* font */
+
+@font-face {
+  font-family: hanken;
+  src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+/* centering div */
+
+body {
+  display: grid;
+  place-items: center center;
+}
+
+html {
+  font-family: hanken;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+}
+
+.result {
+  text-align: center;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: hsl(0, 0%, 100%, 70%);
+}
+
+.result p span {
+  color: white;
+  font-size: 4rem;
+}
+
+.result span {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.result p:first-of-type {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  padding: 2rem;
+  border-radius: 100%;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary {
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.summary h1 {
+  font-size: larger;
+}
+
+.summary .reaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(0, 100%, 67%);
+  background-color: hsl(0, 100%, 67%, 10%);
+}
+
+.summary .memory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(39, 100%, 56%);
+  background-color: hsl(39, 100%, 56%, 10%);
+}
+.summary .verbal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(166, 100%, 37%);
+  background-color: hsl(166, 100%, 37%, 10%);
+}
+
+.summary .visual {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(234, 85%, 45%);
+  background-color: hsl(234, 85%, 45%, 10%);
+}
+
+.summary button {
+  border-radius: 3rem;
+  font-weight: 600;
+  padding: 1rem;
+  color: white;
+  background-color: hsl(224, 30%, 27%);
+  letter-spacing: 0.03rem;
+}
+
+.summary button:hover {
+  /* background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)); */
+  background-color: hsl(241, 81%, 54%);
+  transition: all 0.3s ease-in-out;
+}
+
+.summary button:active {
+  /* background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)); */
+  background-color: hsl(241, 81%, 54%);
+  transition: all 0.3s ease-in-out;
+}
+
+.summary button:focus {
+  /* background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)); */
+  background-color: hsl(241, 81%, 54%);
+  transition: all 0.3s ease-in-out;
+}
+
+.summary p:last-of-type {
+  color: hsl(224, 30%, 27%, 50%);
+  font-weight: 800;
+}
+
+.summary span {
+  color: hsl(224, 30%, 27%);
+}
+
+.summary p.category {
+  display: flex;
+  align-items: center;
+}
+
+.summary p.category img {
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 650px) {
+  article {
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2rem;
+    box-shadow: hsl(241, 81%, 54%, 10%) 10px 10px 30px 2px;
+  }
+  body {
+    min-height: 100vh;
+  }
+  .result {
+    border-radius: inherit;
+  }
+}
