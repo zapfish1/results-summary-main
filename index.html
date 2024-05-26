@@ -9,60 +9,60 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Frontend Mentor | Results summary component</title>
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <article>
-      <div class="result">
-        <h1>Your Result</h1>
+    <div class="container">
+      <div class="perfume">
+        <picture>
+          <source
+            srcset="images/image-product-desktop.jpg"
+            media="(min-width: 650px)"
+          />
+          <img
+            src="images/image-product-mobile.jpg"
+            alt="a picture of Gabrielle Essence Eau De Parfum"
+          />
+        </picture>
+      </div>
 
-        <p><span>76</span> of 100</p>
+      <div class="information">
+        <p class="tag">Perfume</p>
 
-        <span>Great</span>
-        <p>
-          You scored higher than 65% of the people who have taken these tests.
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+
+        <p class="description">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
         </p>
+        <div class="price">
+          <p class="new-price">$149.99</p>
+          <p class="old-price">$169.99</p>
+        </div>
+
+        <button>
+          <img src="images/icon-cart.svg" alt="symbol of a cart" /> Add to Cart
+        </button>
       </div>
-
-      <div class="summary">
-        <h1>Summary</h1>
-
-        <div class="reaction">
-          <p class="category">
-            <img src="assets/images/icon-reaction.svg" alt="reaction" />
-            Reaction
-          </p>
-          <p><span>80 </span>/ 100</p>
-        </div>
-
-        <div class="memory">
-          <p class="category">
-            <img src="assets/images/icon-memory.svg" alt="memory" /> Memory
-          </p>
-          <p><span>92 </span>/ 100</p>
-        </div>
-
-        <div class="verbal">
-          <p class="category">
-            <img src="assets/images/icon-verbal.svg" alt="verbal" /> Verbal
-          </p>
-          <p><span>61 </span> / 100</p>
-        </div>
-
-        <div class="visual">
-          <p class="category">
-            <img src="assets/images/icon-visual.svg" alt="visual" /> Visual
-          </p>
-          <p><span>72 </span>/ 100</p>
-        </div>
-
-        <button>Continue</button>
-      </div>
-    </article>
+    </div>
   </body>
 </html>
