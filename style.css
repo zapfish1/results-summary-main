@@ -100,21 +100,14 @@ button {
   text-align: center;
 }
 
-body {
-  min-height: 100vh;
+/* font */
+
+@font-face {
+  font-family: hanken;
+  src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
 }
 
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* centering div */
 
 body {
   display: grid;
@@ -122,106 +115,153 @@ body {
 }
 
 html {
-  font-family: "Montserrat", sans-serif;
-  background-color: hsl(30, 38%, 92%);
-  color: hsl(228, 12%, 48%);
-  font-weight: 500;
-}
-
-.container {
-  background-color: hsl(0, 0%, 100%);
-  display: grid;
-  gap: 1.5rem;
-  padding: 2rem;
-  border-radius: 1rem;
-
-  width: 384px;
-}
-
-.information {
-  display: grid;
-  gap: 1rem;
-}
-
-h1 {
-  font-family: "Fraunces", serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: hsl(212, 21%, 14%);
-}
-
-.price {
-  display: flex;
+  font-family: hanken;
   align-items: center;
-  gap: 1rem;
-}
-
-.new-price {
-  color: hsl(158, 36%, 37%);
-  font-family: "Fraunces", serif;
-  font-size: 2rem;
   font-weight: 700;
+  letter-spacing: 0.03rem;
 }
 
-.old-price {
-  text-decoration: line-through;
-  font-size: small;
+.result {
+  text-align: center;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: hsl(0, 0%, 100%, 70%);
 }
 
-.tag {
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-size: 0.8rem;
+.result p span {
+  color: white;
+  font-size: 4rem;
 }
 
-button {
-  background-color: hsl(158, 36%, 37%);
-  color: hsl(0, 0%, 100%);
-  padding: 0.8rem;
-  width: 100%;
-  font-weight: 600;
-  border-radius: 0.5rem;
+.result span {
+  color: white;
+  font-size: 1.5rem;
+}
 
+.result p:first-of-type {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  padding: 2rem;
+  border-radius: 100%;
+  gap: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-button:hover {
-  background-color: hsl(212, 21%, 14%);
+.summary {
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.summary h1 {
+  font-size: larger;
+}
+
+.summary .reaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(0, 100%, 67%);
+  background-color: hsl(0, 100%, 67%, 10%);
+}
+
+.summary .memory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(39, 100%, 56%);
+  background-color: hsl(39, 100%, 56%, 10%);
+}
+.summary .verbal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(166, 100%, 37%);
+  background-color: hsl(166, 100%, 37%, 10%);
+}
+
+.summary .visual {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(234, 85%, 45%);
+  background-color: hsl(234, 85%, 45%, 10%);
+}
+
+.summary button {
+  border-radius: 3rem;
+  font-weight: 600;
+  padding: 1rem;
+  color: white;
+  background-color: hsl(224, 30%, 27%);
+  letter-spacing: 0.03rem;
+}
+
+.summary button:hover {
+  /* background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)); */
+  background-color: hsl(241, 81%, 54%);
   transition: all 0.3s ease-in-out;
 }
 
-button:focus {
-  background-color: hsl(212, 21%, 14%);
+.summary button:active {
+  /* background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)); */
+  background-color: hsl(241, 81%, 54%);
   transition: all 0.3s ease-in-out;
 }
 
-button img {
+.summary button:focus {
+  /* background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%)); */
+  background-color: hsl(241, 81%, 54%);
+  transition: all 0.3s ease-in-out;
+}
+
+.summary p:last-of-type {
+  color: hsl(224, 30%, 27%, 50%);
+  font-weight: 800;
+}
+
+.summary span {
+  color: hsl(224, 30%, 27%);
+}
+
+.summary p.category {
+  display: flex;
+  align-items: center;
+}
+
+.summary p.category img {
   margin-right: 0.5rem;
 }
 
-.perfume img {
-  border-radius: 0.5rem;
-}
-
-.description {
-    line-height: 1.6rem;
-}
-
 @media screen and (min-width: 650px) {
-  .container {
+  article {
     width: 700px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: hsl(241, 81%, 54%, 10%) 10px 10px 30px 2px;
   }
   body {
     min-height: 100vh;
   }
-  h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
+  .result {
+    border-radius: inherit;
   }
 }
